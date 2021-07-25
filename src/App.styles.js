@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Template = styled.div`
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr 80% 1fr;
+  grid-template-rows: 14% 70% 1fr;
   grid-column-gap: 0px;
   grid-row-gap: 0px;
   text-align: center;
@@ -20,7 +20,7 @@ export const Template = styled.div`
   }
   b {
     grid-area: b;
-    height: 1000px;
+    /* height: 1000px; */
   }
   c {
     grid-area: c;
