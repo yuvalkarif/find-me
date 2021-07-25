@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import useTimer from "./useTimer";
-
+export let time = 0;
 const Timer = ({ isCorrect }) => {
   const {
     timer,
@@ -27,6 +27,7 @@ const Timer = ({ isCorrect }) => {
     }
     if (isCorrect.pointer1 && isCorrect.pointer2) {
       handlePause();
+      time = formatTime();
     }
   }, [firstLoad, isCorrect]);
   return (
