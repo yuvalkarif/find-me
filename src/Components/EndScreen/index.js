@@ -10,11 +10,15 @@ import {
 } from "./EndScreen.styles";
 
 const EndScreen = () => {
+  const [isSubmited, setIsSubmited] = useState(false);
   return (
     <Wrapper>
       <Content>
-        {/* <SubmitScreen /> */}
-        <Leaderboard />
+        {isSubmited ? (
+          <Leaderboard />
+        ) : (
+          <SubmitScreen setIsSubmited={setIsSubmited} />
+        )}
       </Content>
 
       <BlackScreen></BlackScreen>

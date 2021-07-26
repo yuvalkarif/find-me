@@ -8,8 +8,8 @@ import EndScreen from "./Components/EndScreen";
 
 function App() {
   const [isCorrect, setIsCorrect] = useState({
-    pointer1: true,
-    pointer2: true,
+    pointer1: false,
+    pointer2: false,
   });
   const [check, setCheck] = useState(false);
 

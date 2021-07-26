@@ -23,7 +23,7 @@ export const Content = styled.div`
   color: white;
   text-align: center;
   z-index: 6;
-  top: 35%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   font: inherit;
