@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
+import SubmitScreen from "../SubmitScreen";
+import Leaderboard from "../Leaderboard";
 import {
   Wrapper,
   BlackScreen,
@@ -6,17 +8,13 @@ import {
   EnterName,
   SubmitName,
 } from "./EndScreen.styles";
-import { time } from "../Timer";
+
 const EndScreen = () => {
   return (
     <Wrapper>
       <Content>
-        {" "}
-        <div>You have indeed</div>
-        <div>Found My Maple</div>
-        <div>{time}</div>
-        <EnterName></EnterName>
-        <SubmitName>SUBMIT YOUR SCORE !</SubmitName>
+        {/* <SubmitScreen /> */}
+        <Leaderboard />
       </Content>
 
       <BlackScreen></BlackScreen>

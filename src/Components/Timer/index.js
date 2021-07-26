@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import useTimer from "./useTimer";
+import { formatTime } from "./useTimer";
 export let time = 0;
 const Timer = ({ isCorrect }) => {
   const {
@@ -13,13 +14,7 @@ const Timer = ({ isCorrect }) => {
   } = useTimer(0);
   const [isSearching, setIsSearching] = useState(false);
   const [firstLoad, setFirstLoad] = useState(true);
-  const formatTime = () => {
-    const getSeconds = `0${timer % 60}`.slice(-2);
-    const minutes = `${Math.floor(timer / 60)}`;
-    const getMinutes = `0${minutes % 60}`.slice(-2);
 
-    return ` ${getMinutes} : ${getSeconds}`;
-  };
   useEffect(() => {
     if (firstLoad) {
       setFirstLoad(false);
@@ -27,12 +22,12 @@ const Timer = ({ isCorrect }) => {
     }
     if (isCorrect.pointer1 && isCorrect.pointer2) {
       handlePause();
-      time = formatTime();
+      time = timer;
     }
   }, [firstLoad, isCorrect]);
   return (
     <div className="Timer">
-      <h3>{formatTime()}</h3>
+      <h3>{formatTime(timer)}</h3>
       <div className="Timer-card"></div>
     </div>
   );

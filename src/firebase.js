@@ -23,6 +23,20 @@ export const correctPointers = {
   },
 };
 
+export const submitScore = (nameState, timeState) => {
+  db.collection("scores")
+    .add({
+      name: nameState,
+      time: timeState,
+    })
+    .then((docRef) => {
+      console.log("Document written with ID: ", docRef.id);
+    })
+    .catch((error) => {
+      console.error("Error adding document: ", error);
+    });
+};
+
 // db.collection("correctPointers")
 //   .add({
 //     pointer1: {
