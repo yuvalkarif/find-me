@@ -5,14 +5,11 @@ export let time = 0;
 const Timer = ({ isCorrect }) => {
   const {
     timer,
-    isActive,
-    isPaused,
+
     handleStart,
     handlePause,
-    handleResume,
-    handleReset,
   } = useTimer(0);
-  const [isSearching, setIsSearching] = useState(false);
+
   const [firstLoad, setFirstLoad] = useState(true);
 
   useEffect(() => {
@@ -24,7 +21,7 @@ const Timer = ({ isCorrect }) => {
       handlePause();
       time = timer;
     }
-  }, [firstLoad, isCorrect]);
+  }, [firstLoad, isCorrect, timer, handlePause, handleStart]);
   return (
     <div className="Timer">
       <h3>{formatTime(timer)}</h3>

@@ -1,5 +1,5 @@
 import React from "react";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 import { Content, StyledUl } from "./PointerList.styles";
 
@@ -8,7 +8,7 @@ const initialPointerToShow = {
   pointer2: false,
 };
 const PointerList = ({ pos, setPointers, pointers, setPos }) => {
-  const [pointerToShow, setPointerToShow] = useState(initialPointerToShow);
+  const [pointerToShow] = useState(initialPointerToShow);
 
   return (
     <StyledUl

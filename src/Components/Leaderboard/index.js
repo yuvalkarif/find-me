@@ -29,7 +29,6 @@ const Leaderboard = () => {
       .then((querySnapshot) => {
         querySnapshot.forEach((doc) => {
           setScores((scoresArray) => [...scoresArray, doc.data()]);
-          console.log(doc.data());
         });
       });
   }

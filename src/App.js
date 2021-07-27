@@ -1,5 +1,5 @@
 import React from "react";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Template } from "./App.styles";
 import GameBoard from "./Components/GameBoard";
 import Header from "./Components/Header";

@@ -1,13 +1,7 @@
 import React, { useState } from "react";
 import SubmitScreen from "../SubmitScreen";
 import Leaderboard from "../Leaderboard";
-import {
-  Wrapper,
-  BlackScreen,
-  Content,
-  EnterName,
-  SubmitName,
-} from "./EndScreen.styles";
+import { Wrapper, BlackScreen, Content } from "./EndScreen.styles";
 
 const EndScreen = () => {
   const [isSubmited, setIsSubmited] = useState(false);

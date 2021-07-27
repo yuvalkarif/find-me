@@ -1,6 +1,7 @@
 import React from "react";
 
-import { Content, Wrapper, Marker } from "./Pointer.styles";
+import { Wrapper, Marker } from "./Pointer.styles";
+// import { Content } from "./Pointer.styles";
 
 const Pointer = ({ pointer }) => {
   return (

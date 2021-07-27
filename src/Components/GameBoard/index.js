@@ -42,7 +42,7 @@ const GameBoard = ({ setIsCorrect, setCheck, check }) => {
       }));
     }
     setCheck(false);
-  }, [check]);
+  }, [check, setIsCorrect, pointers, setCheck]);
 
   return (
     <Wrapper
